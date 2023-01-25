@@ -1,0 +1,34 @@
+.box-card{
+    background-color: #332E59;
+    width: 70%;
+    padding: 2rem;
+}
+
+.swap-btn{
+    background-color: #0DAACE;
+    border: 1px solid #0DAACE;
+    border-radius: 10px;
+}
+
+.group-btn{
+    background-color: #4D4A67;
+    outline: none;
+    border: none;
+}
+
+.import_export-arrow{
+    display: flex;
+    justify-content: center;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.connect_wallet-btn{
+    background-color: #0DAACE;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    height: 3rem;
+}
