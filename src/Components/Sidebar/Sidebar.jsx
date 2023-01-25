@@ -12,32 +12,32 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 
 function Sidebar() {
   return (
-    <Box className="mt-3" sx={{ width:'100%', height:"90vh"}}>
-      <Stack justifyContent="space-between" sx={{height:"90vh"}}>
+    <Box className="mt-3" sx={{ width:'100%', height:"92vh"}}>
+      <Stack justifyContent="space-between" sx={{height:"92vh"}}>
         <Stack spacing={5}>
-            <Button>
-                <WindowIcon />
+            <Button >
+                <WindowIcon sx={{ color: "white"}}/>
             </Button>
             <Button>
-              <MailOutlinedIcon />
+              <MailOutlinedIcon sx={{ color: "white"}}/>
             </Button>
             <Button>
-              <CurrencyBitcoinOutlinedIcon />
+              <CurrencyBitcoinOutlinedIcon sx={{ color: "white"}}/>
             </Button>
             <Button>
-              <ViewInArOutlinedIcon />
+              <ViewInArOutlinedIcon sx={{ color: "white"}}/>
             </Button>
             <Button>
-              <WatchOutlinedIcon />
+              <WatchOutlinedIcon sx={{ color: "white"}}/>
             </Button>
             <Button>
-              <PersonOutlineOutlinedIcon />
+              <PersonOutlineOutlinedIcon sx={{ color: "white"}}/>
             </Button>
         </Stack>
 
-        <Stack spacing={2}>
+        <Stack spacing={2} className="mb-3">
           <Button>
-            <LogoutOutlinedIcon />
+            <LogoutOutlinedIcon sx={{ color: "white"}}/>
           </Button>
         </Stack>
       </Stack>
