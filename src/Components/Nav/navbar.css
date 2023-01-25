@@ -4,12 +4,15 @@
 
 .cakeSwap{
     color: #AAABBB;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 
 .search_input{
     background-color: #302A53;
     width: 25rem;
     border: 1px solid #302A53;
+    height: 2.6rem;
 }
 
 .switch_btn{

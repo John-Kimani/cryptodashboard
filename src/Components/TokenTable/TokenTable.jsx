@@ -8,8 +8,6 @@ import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 
 function TokenTable() {
@@ -23,12 +21,12 @@ const rows = [
     ];
   return (
     <Box>
-        <Card className='box-card'>
+        <Card className='box-card_table'>
             <Card.Header className='header'>
                 <h3 className='table_heading'>Tokens</h3>
             </Card.Header>
             <Card.Body>
-                <TableContainer>
+                <TableContainer >
                     <Table aria-label='simple table' className='trading_table' sx={{ [ `& .${tableCellClasses.root}`]: {borderBottom: "none"}}}>
                         <TableHead sx={{ outline: "none",border:"none"}}>
                             <TableRow sx={{ outline: "none",border:"none"}}>

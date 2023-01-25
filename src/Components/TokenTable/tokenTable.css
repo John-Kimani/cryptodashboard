@@ -1,5 +1,9 @@
-.box-card{
-    width: 95%;
+.box-card_table{
+    background-color: #332E59;
+    width: 98%;
+    border-radius: 10px;
+    padding-top: 1.2rem;
+    padding-left: 1.6rem;
 }
 
 .header{

@@ -12,8 +12,8 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 
 function Sidebar() {
   return (
-    <Box className="mt-3" sx={{ width:'100%', height:"92vh"}}>
-      <Stack justifyContent="space-between" sx={{height:"92vh"}}>
+    <Box className="mt-3" sx={{ width:'100%', height:"90vh"}}>
+      <Stack justifyContent="space-between" sx={{height:"90vh"}}>
         <Stack spacing={5}>
             <Button >
                 <WindowIcon sx={{ color: "white"}}/>

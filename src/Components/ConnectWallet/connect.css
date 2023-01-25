@@ -21,11 +21,23 @@
     border: none;
 }
 
+.music__icon{
+    background-color: #4D4A67;
+    border: 1px solid #4D4A67;
+}
+
 .import_export-arrow{
     display: flex;
     justify-content: center;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
+}
+
+.input{
+    background-color: #4D4A67;
+    border: none;
+    outline: none;
+    height: 3rem;
 }
 
 .connect_wallet-btn{
@@ -36,4 +48,9 @@
     outline: none;
     width: 100%;
     height: 3rem;
+}
+
+.footer{
+    background: none;
+    border: none;
 }
