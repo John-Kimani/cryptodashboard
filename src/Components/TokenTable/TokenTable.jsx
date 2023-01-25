@@ -24,7 +24,7 @@ const rows = [
   return (
     <Box>
         <Card className='box-card'>
-            <Card.Header>
+            <Card.Header className='header'>
                 <h3 className='table_heading'>Tokens</h3>
             </Card.Header>
             <Card.Body>

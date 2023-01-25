@@ -11,7 +11,7 @@ function ConnectWallet() {
   return (
     <Box className="mt-2">
       <Card className="box-card">
-        <Card.Header>
+        <Card.Header className="header">
             <ButtonGroup size="small" aria-label="small button group" className='group-btn'>
                 <Button className="swap-btn">Swap</Button>
                 <Button className='group-btn'>Limit</Button>

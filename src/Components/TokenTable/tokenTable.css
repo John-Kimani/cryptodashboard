@@ -2,6 +2,10 @@
     width: 95%;
 }
 
+.header{
+    background: none;
+    border-bottom: none;
+}
 
 .trading_table{
     background-color: #332E59;

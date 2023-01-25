@@ -4,6 +4,11 @@
     padding: 2rem;
 }
 
+.header{
+    background: none;
+    border-bottom: none;
+}
+
 .swap-btn{
     background-color: #0DAACE;
     border: 1px solid #0DAACE;
