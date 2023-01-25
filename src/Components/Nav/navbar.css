@@ -1,0 +1,33 @@
+.tool-bar{
+    background-color: #2C254A;
+}
+
+.cakeSwap{
+    color: #AAABBB;
+}
+
+.search_input{
+    background-color: #302A53;
+    width: 25rem;
+    border: 1px solid #302A53;
+}
+
+.switch_btn{
+    background-color: #302A53;
+    border-radius: 8px;
+    font-size: small;
+    color: #AAABBB;
+    border: 1px solid #302A53;
+}
+
+.notification-btn{
+    background-color: #302A53;
+    border: 1px solid #302A53;
+    border-radius: 50%;
+}
+
+.account{
+    background: none;
+    color: white;
+    border: none;
+}
