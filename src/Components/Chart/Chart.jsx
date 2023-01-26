@@ -261,6 +261,9 @@ function Chart() {
       title: {
         text: 'BNB/USDT',
         align: 'left',
+        style: {
+          color: "white"
+        }
       },
       annotations: {
         yaxis: [
@@ -292,6 +295,7 @@ function Chart() {
           formatter: function(val) {
             return dayjs(val).format('MMM DD HH:mm')
           },
+          
         },
       },
       yaxis: {
