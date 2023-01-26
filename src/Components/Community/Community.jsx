@@ -1,21 +1,21 @@
 import React from 'react';
-import './community.css';
+import { joinBtn, heading, content } from './styles.js';
 import Box from "@mui/material/Box";
-import Card from "react-bootstrap/Card";
-import Button from 'react-bootstrap/Button';
+import Button from '@mui/material/Button';
+import Stack from "@mui/material/Stack";
+import {Paper} from "@mui/material";
 
 function Community() {
   return (
-    <Box>
-        <Card className='box-card'>
-            <Card.Body>
-                <h4 className='heading'>Join Our Community</h4>
-                <p className='content'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </Card.Body>
-            <Button className='join_community-btn'>Join Now</Button>
-
-        </Card>
-    </Box>
+    <Paper elevation={3} style={{backgroundColor: "#332E59",color:"#fefefe"}} sx={{p:2, }}>
+    <Stack >
+        <Box>
+            <h4 style={heading}>Join Our Community</h4>
+            <p style={content}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </Box>
+        <Button style={joinBtn}>Join Now</Button>
+    </Stack>
+  </Paper>
   )
 }
 
