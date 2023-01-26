@@ -1,5 +1,5 @@
 import React from "react";
-import { checkedBtn, uncheckedBtn, iconBtn, input, inputIcon } from "./styles";
+import { checkedBtn, uncheckedBtn, iconBtn, input, inputIcon, connectPaper } from "./styles";
 import { FormControl } from "@mui/material";
 import Box from "@mui/material/Box";
 import ImportExportOutlinedIcon from "@mui/icons-material/ImportExportOutlined";
@@ -15,10 +15,10 @@ function ConnectWallet() {
   return (
     <Paper
       elevation={3}
-      style={{ backgroundColor: "#332E59", color: "#fefefe" }}
+      style={connectPaper}
       sx={{ p: 2 }}
     >
-      <Stack spacing={3}>
+      <Stack spacing={2}>
         <Stack direction="row" sx={{ justifyContent: "space-between" }}>
           <ButtonGroup size="small">
             <Button variant="contained" style={checkedBtn}>

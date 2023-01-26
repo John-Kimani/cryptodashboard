@@ -14,3 +14,9 @@ export const joinBtn ={
     textTransform: "none",
     color:"white"
 }
+
+export const communityPaper = {
+    backgroundColor: "#332E59", 
+    color:"#fefefe",
+    borderRadius: "10px"
+}

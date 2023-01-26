@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './chart.css';
 import ReactApexChart from 'react-apexcharts';
 import dayjs from 'dayjs';
 
@@ -14,7 +13,7 @@ function Chart() {
       data: [
         {
           x: new Date(1538778600000),
-          y: [6629.81, 6650.5, 6623.04, 6633.33]
+          y: [6629.81, 6650.5, 6623.04, 6633.33],
         },
         {
           x: new Date(1538780400000),
@@ -256,7 +255,7 @@ function Chart() {
     }],
     options: {
       chart: {
-        height: 450,
+        height: 'auto',
         type: 'candlestick',
       },
       title: {
@@ -264,24 +263,28 @@ function Chart() {
         align: 'left',
       },
       annotations: {
-        xaxis: [
+        yaxis: [
           {
-            x: 'Oct 06 14:00',
+            y: 6590,
             borderColor: '#00E396',
             label: {
               borderColor: '#00E396',
+
               style: {
-                fontSize: '12px',
+                fontSize: '10px',
+                background: '#00E396',
+                color: '#fff',
               },
-              orientation: 'horizontal',
-              offsetY: 7,
-              text: 'Annotation Test'
+              text: "6590"
             },
           }
         ]
       },
       tooltip: {
         enabled: true,
+      },
+      markers: {
+        colors: ['#F44336', '#E91E63', '#9C27B0']
       },
       xaxis: {
         type: 'category',
@@ -302,9 +305,7 @@ function Chart() {
 
 
   return (
-    <div className='chart'>
-      <ReactApexChart options={state.options} series={state.series} type="candlestick" height={450} />
-    </div>
+    <ReactApexChart options={state.options} series={state.series} type="candlestick" height={"auto"} />
   )
 }
 

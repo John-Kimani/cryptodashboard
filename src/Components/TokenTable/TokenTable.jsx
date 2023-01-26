@@ -1,14 +1,13 @@
 import React from 'react';
-import "./tokenTable.css";
-import Box from "@mui/material/Box";
-import Card from "react-bootstrap/Card";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Button from 'react-bootstrap/Button';
+import Button from '@mui/material/Button';
+import {Paper} from "@mui/material";
+import  { heading, tablePaper, tradeBtn } from './styles'
 
 function TokenTable() {
     function createData(name, balance, totalValue, trade) {
@@ -20,14 +19,10 @@ const rows = [
     createData('Ethereum', 32234, 5340.32, "Trade"),
     ];
   return (
-    <Box>
-        <Card className='box-card_table'>
-            <Card.Header className='header'>
-                <h3 className='table_heading'>Tokens</h3>
-            </Card.Header>
-            <Card.Body>
+        <Paper elevation={3} style={tablePaper} sx={{p:4}}>
+            <h3 style={heading}>Tokens</h3>
                 <TableContainer >
-                    <Table aria-label='simple table' className='trading_table' sx={{ [ `& .${tableCellClasses.root}`]: {borderBottom: "none"}}}>
+                    <Table aria-label='simple table' sx={{ [ `& .${tableCellClasses.root}`]: {borderBottom: "none"}}}>
                         <TableHead sx={{ outline: "none",border:"none"}}>
                             <TableRow sx={{ outline: "none",border:"none"}}>
                                 <TableCell sx={{ color:"#878787"}}>Name</TableCell>
@@ -42,15 +37,14 @@ const rows = [
                                     <TableCell component='th' scope='row' sx={{ color:"white"}}>{row.name} </TableCell>
                                     <TableCell align='center' sx={{ color:"white"}}>{row.balance}</TableCell>
                                     <TableCell align='center' sx={{ color:"white"}}>{row.totalValue}</TableCell>
-                                    <TableCell align='center' sx={{ color:"white"}}><Button className='trade_button' size="sm">{row.trade}</Button></TableCell>
+                                    <TableCell align='center' sx={{ color:"white"}}><Button style={tradeBtn} size="sm">{row.trade}</Button></TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>
                     </Table>
                 </TableContainer>
-            </Card.Body>
-        </Card>
-    </Box>
+
+        </Paper>
   )
 }
 

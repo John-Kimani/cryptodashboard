@@ -24,3 +24,9 @@ export const inputIcon = {
     color: "white",
     textTransform: "none"
 }
+
+export const connectPaper = {
+    backgroundColor: "#332E59", 
+    color:"#fefefe",
+    borderRadius: "10px"
+}
