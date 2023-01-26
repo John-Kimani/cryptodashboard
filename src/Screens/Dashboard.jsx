@@ -12,9 +12,9 @@ import TokenTable from "../Components/TokenTable/TokenTable";
 
 function Dashboard() {
   return (
-    <Stack style={dashboard}>
+    <Stack style={dashboard} py={1}>
       <NavbarComponent />
-      <Stack direction="row" py={4} px={2}>
+      <Stack direction="row" px={2} py={2}>
         <Sidebar />
         <Grid container justifyContent="space-between">
           <Grid item xs={12} md={4.5}>

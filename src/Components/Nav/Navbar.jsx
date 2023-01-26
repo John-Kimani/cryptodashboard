@@ -1,41 +1,50 @@
-import "./navbar.css";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Form from "react-bootstrap/Form";
 import Stack from "@mui/material/Stack";
-import Button from "react-bootstrap/Button";
+import Button from "@mui/material/Button";
 import NotificationAddIcon from "@mui/icons-material/NotificationAdd";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { InputAdornment, Box, Typography } from "@mui/material";
+import { btn, searchInput, switchBtn, navBar } from "./styles";
+import { BsSearch } from "react-icons/bs";
+import Input from "@mui/material/Input";
 
 const NavbarComponent = () => {
   return (
-    <Navbar expand="lg" className='tool-bar'>
-      <Navbar.Brand className="ms-5 cakeSwap" href="#home">
+    <Box style={navBar} sx={{ px: 8, pt: 2}}>
+      <Typography
+        textAlign="center"
+        variant="h3"
+        fontSize="1.5rem"
+        fontWeight={600}
+      >
         CakeSwap
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mx-auto">
-          <Form>
-            <Form.Control className='search_input' size="sm" type="text" placeholder="Search" />
-          </Form>
-        </Nav>
+      </Typography>
+      <Stack direction="row" spacing="auto" style={{ width: "25%"}}>
+        <Input
+          startAdornment={
+            <InputAdornment position="start">
+              <BsSearch style={{ color: "white" }} fontSize="small" />
+            </InputAdornment>
+          }
+          placeholder="Search"
+          sx={{ color: "white" }}
+          style={searchInput}
+        />
+      </Stack>
 
-        <Nav className="ml-auto me-5">
-          <Stack direction="row" spacing={5}>
-            <Button className='switch_btn'>Switch to ETH</Button>
-            <Button className="notification-btn">
-              <NotificationAddIcon sx={{ color: "AAABBB"}}/>
-            </Button>
-            <Button className="account">
-              <ArrowDropDownIcon />
-              <AccountCircleIcon />
-            </Button>
-          </Stack>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+      <Stack>
+        <Stack direction="row" spacing={2}>
+          <Button style={switchBtn}>Switch to ETH</Button>
+          <Button style={btn}>
+            <NotificationAddIcon sx={{ color: "white" }} fontSize="small" />
+          </Button>
+          <Button style={btn}>
+            <ArrowDropDownIcon sx={{ color: "white" }} fontSize="small" />
+            <AccountCircleIcon sx={{ color: "white" }} fontSize="small" />
+          </Button>
+        </Stack>
+      </Stack>
+    </Box>
   );
 };
 
