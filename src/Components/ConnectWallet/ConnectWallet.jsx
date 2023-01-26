@@ -1,57 +1,93 @@
-import "./connect.css";
 import React from "react";
+import { checkedBtn, uncheckedBtn, iconBtn, input, inputIcon } from "./styles";
+import { FormControl } from "@mui/material";
 import Box from "@mui/material/Box";
-import Card from "react-bootstrap/Card";
-import Form from 'react-bootstrap/Form';
-import ImportExportOutlinedIcon from '@mui/icons-material/ImportExportOutlined';
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Stack from '@mui/material/Stack';
-import TuneIcon from '@mui/icons-material/Tune';
+import ImportExportOutlinedIcon from "@mui/icons-material/ImportExportOutlined";
+import Stack from "@mui/material/Stack";
+import { GoSettings } from "react-icons/go";
+import { Paper, ButtonGroup, Button } from "@mui/material";
+import Input from "@mui/material/Input";
+import InputLabel from "@mui/material/InputLabel";
+import InputAdornment from "@mui/material/InputAdornment";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 function ConnectWallet() {
   return (
-    <Box className="mt-2">
-      <Card className="box-card">
-        <Card.Header className="header">
-          <Stack direction='row' sx={{ justifyContent:"space-between"}}>
-          <ButtonGroup size="small" aria-label="small button group" className='group-btn'>
-                <Button className="swap-btn">Swap</Button>
-                <Button className='group-btn'>Limit</Button>
-                <Button className='group-btn'>Liquidity</Button>
-            </ButtonGroup>
-
-            <Button className="music__icon">
-              <TuneIcon />
+    <Paper
+      elevation={3}
+      style={{ backgroundColor: "#332E59", color: "#fefefe" }}
+      sx={{ p: 2 }}
+    >
+      <Stack spacing={3}>
+        <Stack direction="row" sx={{ justifyContent: "space-between" }}>
+          <ButtonGroup size="small">
+            <Button variant="contained" style={checkedBtn}>
+              Swap
             </Button>
-          </Stack>
-        </Card.Header>
-        <Card.Body>
-          <div className="row">
-            <Form>
-                <Form.Group>
-                    <Form.Label>From</Form.Label>
-                    <Form.Control className="input"  placeholder="0.0"/>
-                </Form.Group>
-            </Form>
-          </div>
-          <div className="import_export-arrow">
-          <ImportExportOutlinedIcon sx={{ color: "white"}} />
-          </div>
-          <div className="row">
-            <Form>
-                <Form.Group>
-                    <Form.Label>To</Form.Label>
-                    <Form.Control className="input" placeholder="0.0" />
-                </Form.Group>
-            </Form>
-          </div>
-        </Card.Body>
-        <Card.Footer className="footer">
-          <Button className="connect_wallet-btn mt-4">Connect to Wallet</Button>
-        </Card.Footer>
-      </Card>
-    </Box>
+            <Button
+              variant="outlined"
+              style={uncheckedBtn}
+              className="group-btn"
+            >
+              Limit
+            </Button>
+            <Button
+              variant="outlined"
+              style={uncheckedBtn}
+              className="group-btn"
+            >
+              Liquidity
+            </Button>
+          </ButtonGroup>
+          <Button style={{ backgroundColor: "#4D4A67" }}>
+            <GoSettings fontSize="medium" style={iconBtn} />
+          </Button>
+        </Stack>
+
+        <FormControl variant="standard">
+          <InputLabel style={inputIcon}>From</InputLabel>
+          <Input
+            startAdornment={
+              <InputAdornment position="start">
+                <ArrowDropDownIcon fontSize="small" style={iconBtn} />
+              </InputAdornment>
+            }
+            disableUnderline={true}
+            style={input}
+            sx={{ px: 1, py: 0.5 }}
+            placeholder="0.0"
+          />
+        </FormControl>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <ImportExportOutlinedIcon sx={{ color: "white" }} fontSize="large" />
+        </Box>
+
+        <FormControl variant="standard">
+          <InputLabel style={inputIcon}>To</InputLabel>
+          <Input
+            startAdornment={
+              <InputAdornment position="start">
+                <ArrowDropDownIcon fontSize="small" style={iconBtn} />
+              </InputAdornment>
+            }
+            disableUnderline={true}
+            style={input}
+            sx={{ px: 1, py: 0.5 }}
+            placeholder="0.0"
+          />
+        </FormControl>
+
+        <Button style={checkedBtn} fullWidth>
+          Connect to Wallet
+        </Button>
+      </Stack>
+    </Paper>
   );
 }
 
