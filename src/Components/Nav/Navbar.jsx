@@ -1,51 +1,77 @@
-import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import NotificationAddIcon from "@mui/icons-material/NotificationAdd";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { InputAdornment, Box, Typography } from "@mui/material";
-import { btn, searchInput, switchBtn, navBar } from "./styles";
+import { InputAdornment, Typography } from "@mui/material";
+import { searchInput, switchBtn } from "./styles";
 import { BsSearch } from "react-icons/bs";
 import Input from "@mui/material/Input";
+import Grid from "@mui/material/Grid";
 
 const NavbarComponent = () => {
   return (
-    <Box style={navBar} sx={{ px: 8, pt: 2}}>
-      <Typography
-        textAlign="center"
-        variant="h3"
-        fontSize="1.5rem"
-        fontWeight={600}
-      >
+    <Grid container  direction="row" md={12} alignContent="center" justifyContent="center" py={2}>
+    <Grid item xs={12} md={4} style={{textAlign: "center"}}>
+      <Typography variant="h3" fontSize="1rem" fontWeight={600}>
         CakeSwap
       </Typography>
-      <Stack direction="row" spacing="auto" style={{ width: "25%"}}>
-        <Input
-          startAdornment={
-            <InputAdornment position="start">
-              <BsSearch style={{ color: "white" }} fontSize="small" />
-            </InputAdornment>
-          }
-          placeholder="Search"
-          sx={{ color: "white" }}
-          style={searchInput}
-        />
-      </Stack>
+    </Grid>
+    <Grid item xs={4} md={4}>
+    <Input
+        startAdornment={
+          <InputAdornment position="start">
+            <BsSearch style={{ color: "white" }} fontSize="10px" />
+          </InputAdornment>
+        }
+        placeholder="Search"
+        sx={{ color: "white" }}
+        style={searchInput}
+      />
+    </Grid>
+    <Grid item xs={7} md={4}>
+      <Grid container direction="row">
+        <Grid item md={4}>      
+            <Button style={switchBtn} size="small">
+              Switch to ETH
+            </Button>
+        </Grid>
+        <Grid item md={1}> 
+          <NotificationAddIcon sx={{ color: "white", fontSize: "15px" }} />
+        </Grid>
+        <Grid item md={4}> 
+          <ArrowDropDownIcon sx={{ color: "white", fontSize: "15px" }} />
+          <AccountCircleIcon sx={{ color: "white", fontSize: "15px" }} /></Grid>
+       </Grid>
+    </Grid>
+  </Grid>
 
-      <Stack>
-        <Stack direction="row" spacing={2}>
-          <Button style={switchBtn}>Switch to ETH</Button>
-          <Button style={btn}>
-            <NotificationAddIcon sx={{ color: "white" }} fontSize="small" />
-          </Button>
-          <Button style={btn}>
-            <ArrowDropDownIcon sx={{ color: "white" }} fontSize="small" />
-            <AccountCircleIcon sx={{ color: "white" }} fontSize="small" />
-          </Button>
-        </Stack>
-      </Stack>
-    </Box>
+
   );
 };
 
 export default NavbarComponent;
+
+
+{/* <Box style={navBar}>
+      <Typography variant="h3" fontSize="1rem" fontWeight={600}>
+        CakeSwap
+      </Typography>
+      <Input
+        startAdornment={
+          <InputAdornment position="start">
+            <BsSearch style={{ color: "white" }} fontSize="10px" />
+          </InputAdornment>
+        }
+        placeholder="Search"
+        sx={{ color: "white" }}
+        style={searchInput}
+      />
+      <Box style={list}>
+      <Button style={switchBtn} size="small">
+        Switch to ETH
+      </Button>
+      <NotificationAddIcon sx={{ color: "white", fontSize: "15px" }} />
+      <ArrowDropDownIcon sx={{ color: "white", fontSize: "15px" }} />
+      <AccountCircleIcon sx={{ color: "white", fontSize: "15px" }} />
+      </Box>
+    </Box> */}
