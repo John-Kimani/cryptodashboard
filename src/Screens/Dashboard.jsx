@@ -14,32 +14,44 @@ function Dashboard() {
   return (
     <Stack style={dashboard} py={1}>
       <NavbarComponent />
-      <Stack direction="row" px={2} py={2}>
-        <Sidebar />
-        <Grid container justifyContent="space-between">
-          <Grid item xs={12} md={4.5}>
-            <Stack mx={2} spacing={2}>
-              <Grid container gap={6} justifyContent="space-between">
-                <Grid item xs={12} sm={6.5} md={12}>
-                  <ConnectWallet />
-                </Grid>
-                <Grid item xs={12} sm={4.5} md={12}>
-                  <Community />
-                </Grid>
-              </Grid>
-            </Stack>
-          </Grid>
-          <Grid item xs={12} md={7} mt={2}>
-            <Stack spacing={2} sx={{ px: 2 }}>
-              <Box>
-                <Chart />
-              </Box>
-              <TokenTable />
-            </Stack>
+      <Grid container gap={1}>
+        <Grid item xs={12} sm={12} md={1}>
+          <Sidebar />
+        </Grid>
+        <Grid item xs={12} sm={12} md={4} px="auto">
+          <Grid
+            container
+            spacing={3}
+            justifyContent="center"
+            direction="column"
+            alignContent="center"
+          >
+            <Grid item xs={12} sm={6.5} md={12}>
+              <ConnectWallet />
+            </Grid>
+            <Grid item xs={12} sm={4.5} md={12}>
+              <Community />
+            </Grid>
           </Grid>
         </Grid>
-        <Stack></Stack>
-      </Stack>
+
+        <Grid item xs={12} sm={12} md={6} px="auto">
+          <Grid
+            container
+            spacing={1}
+            justifyContent="center"
+            direction="column"
+            alignContent="center"
+          >
+            <Grid item xs={12} sm={4} md={12}>
+              <Chart style={{ overflow: "hidden" }} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={12}>
+              <TokenTable />
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
     </Stack>
   );
 }
