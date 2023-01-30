@@ -50,28 +50,3 @@ const NavbarComponent = () => {
 };
 
 export default NavbarComponent;
-
-
-{/* <Box style={navBar}>
-      <Typography variant="h3" fontSize="1rem" fontWeight={600}>
-        CakeSwap
-      </Typography>
-      <Input
-        startAdornment={
-          <InputAdornment position="start">
-            <BsSearch style={{ color: "white" }} fontSize="10px" />
-          </InputAdornment>
-        }
-        placeholder="Search"
-        sx={{ color: "white" }}
-        style={searchInput}
-      />
-      <Box style={list}>
-      <Button style={switchBtn} size="small">
-        Switch to ETH
-      </Button>
-      <NotificationAddIcon sx={{ color: "white", fontSize: "15px" }} />
-      <ArrowDropDownIcon sx={{ color: "white", fontSize: "15px" }} />
-      <AccountCircleIcon sx={{ color: "white", fontSize: "15px" }} />
-      </Box>
-    </Box> */}

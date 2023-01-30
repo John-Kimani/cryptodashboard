@@ -9,6 +9,7 @@ import ViewInArOutlinedIcon from "@mui/icons-material/ViewInArOutlined";
 import WatchOutlinedIcon from "@mui/icons-material/WatchOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import Grid from "@mui/material/Grid";
+import { iconsBtn } from "./styles.js";
 
 function Sidebar() {
   return (
@@ -21,29 +22,29 @@ function Sidebar() {
       <Grid item height="75%">
         <Stack spacing={3}>
           <Button>
-            <WindowIcon sx={{ color: "white" }} />
+            <WindowIcon style={iconsBtn} />
           </Button>
           <Button>
-            <MailOutlinedIcon sx={{ color: "white" }} />
+            <MailOutlinedIcon style={iconsBtn} />
           </Button>
           <Button>
-            <CurrencyBitcoinOutlinedIcon sx={{ color: "white" }} />
+            <CurrencyBitcoinOutlinedIcon style={iconsBtn} />
           </Button>
           <Button>
-            <ViewInArOutlinedIcon sx={{ color: "white" }} />
+            <ViewInArOutlinedIcon style={iconsBtn} />
           </Button>
           <Button>
-            <WatchOutlinedIcon sx={{ color: "white" }} />
+            <WatchOutlinedIcon style={iconsBtn} />
           </Button>
           <Button>
-            <PersonOutlineOutlinedIcon sx={{ color: "white" }} />
+            <PersonOutlineOutlinedIcon style={iconsBtn} />
           </Button>
         </Stack>
       </Grid>
       <Grid item>
         <Stack>
           <Button>
-            <LogoutOutlinedIcon sx={{ color: "white" }} />
+            <LogoutOutlinedIcon style={iconsBtn} />
           </Button>
         </Stack>
       </Grid>

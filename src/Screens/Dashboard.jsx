@@ -2,7 +2,6 @@ import React from "react";
 import { dashboard } from "./styles";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 import NavbarComponent from "../Components/Nav/Navbar";
 import Sidebar from "../Components/Sidebar/Sidebar";
 import ConnectWallet from "../Components/ConnectWallet/ConnectWallet";
@@ -14,11 +13,11 @@ function Dashboard() {
   return (
     <Stack style={dashboard} py={1}>
       <NavbarComponent />
-      <Grid container gap={1}>
+      <Grid container gap={1} py={3}>
         <Grid item xs={12} sm={12} md={1}>
           <Sidebar />
         </Grid>
-        <Grid item xs={12} sm={12} md={4} px="auto">
+        <Grid item xs={12} sm={12} md={3} px="auto">
           <Grid
             container
             spacing={3}
@@ -35,7 +34,7 @@ function Dashboard() {
           </Grid>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} px="auto">
+        <Grid item xs={12} sm={12} md={6.5} px="auto">
           <Grid
             container
             spacing={1}

@@ -1,12 +1,13 @@
 export const heading = {
     textAlign: "center",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    fontSize: "18px"
 }
 
 export const content = {
     textAlign: "center",
     padding: "2rem",
-    fontSize: "small"
+    fontSize: "10px"
 }
 
 export const joinBtn ={
